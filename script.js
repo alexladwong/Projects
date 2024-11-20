@@ -32,7 +32,7 @@ const T = {
         return `${hours}:${T.formatSegment(minutes)}`;
     },
     formatHours: (hours) => {
-        return hours % 24 === 0 ? 24 : hours % 12;
+        return hours % 12 === 0 ? 12 : hours % 12;
     },
     formatSegment: (segment) => {
         return segment < 10 ? `0${segment}` : segment;
@@ -448,6 +448,29 @@ const Menu = () => {
                 React.createElement(Tools, null),
                 React.createElement(Movies, null)))));
 };
+
+const Menu = () => {
+    return (React.createElement("div", { id: "app-menu" },
+        React.createElement("div", { id: "app-menu-content-wrapper" },
+            React.createElement("div", { id: "app-menu-content" },
+                React.createElement("div", { id: "app-menu-content-header" },
+                    React.createElement("div", { className: "app-menu-content-header-section" },
+                        React.createElement(Info, { id: "app-menu-info" }),
+                        React.createElement(Reminder, null)),
+                    React.createElement("div", { className: "app-menu-content-header-section" },
+                        React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-from-arc", id: "sign-out-button", userStatus: UserStatus.LoggedOut }))),
+                React.createElement(QuickNav, null),
+                React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://www.youtube.com/watch?v=d_2rbdPiAHY&t=2s", target: "_blank" },
+                    React.createElement("i", { className: "fa-brands fa-youtube" }),
+                    React.createElement("span", null, "Christian Lifetime")),
+                React.createElement(Weather, null),
+                React.createElement(Restaurants, null),
+                React.createElement(Tools, null),
+                React.createElement(Movies, null)))));
+};
+
+
+
 const Background = () => {
     const { userStatus, setUserStatusTo } = React.useContext(AppContext);
     const handleOnClick = () => {
