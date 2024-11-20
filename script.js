@@ -46,7 +46,7 @@ const LogInUtility = {
                     resolve(true);
                 }
                 else {
-                    reject(`Invalid pin: ${pin}`);
+                    reject(`Invalid Pin Try Again!: ${pin}`);
                 }
             }, N.rand(300, 700));
         });
