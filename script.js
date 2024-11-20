@@ -219,7 +219,7 @@ const QuickNav = () => {
             label: "Food"
         }, {
             id: 3,
-            label: "Apps"
+            label: "My Projects"
         }, {
             id: 4,
             label: "Movies"
