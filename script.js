@@ -223,10 +223,14 @@ const QuickNav = () => {
             label: "My Portfolio"
         },
                 {
-            id: 3,
+            id: 4,
             label: "My Projects"
         }, {
-            id: 4,
+            id: 5,
+            label: "My Projects"
+        },
+                {
+            id: 6,
             label: "Movies"
         }].map((item) => {
             return (React.createElement("div", { key: item.id, className: "quick-nav-item clear-button" },
