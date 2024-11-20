@@ -180,7 +180,7 @@ const Pin = () => {
     };
     const getErrorText = () => {
         if (userStatus === UserStatus.LogInError) {
-            return (React.createElement("span", { id: "app-pin-error-text" }, "Invalid"));
+            return (React.createElement("span", { id: "app-pin-error-text" }, "Invalid Pin Try Again"));
         }
     };
     return (React.createElement("div", { id: "app-pin-wrapper" },
@@ -429,26 +429,6 @@ const UserStatusButton = (props) => {
     return (React.createElement("button", { id: props.id, className: "user-status-button clear-button", disabled: userStatus === props.userStatus, type: "button", onClick: handleOnClick },
         React.createElement("i", { className: props.icon })));
 };
-const Menu = () => {
-    return (React.createElement("div", { id: "app-menu" },
-        React.createElement("div", { id: "app-menu-content-wrapper" },
-            React.createElement("div", { id: "app-menu-content" },
-                React.createElement("div", { id: "app-menu-content-header" },
-                    React.createElement("div", { className: "app-menu-content-header-section" },
-                        React.createElement(Info, { id: "app-menu-info" }),
-                        React.createElement(Reminder, null)),
-                    React.createElement("div", { className: "app-menu-content-header-section" },
-                        React.createElement(UserStatusButton, { icon: "fa-solid fa-arrow-right-from-arc", id: "sign-out-button", userStatus: UserStatus.LoggedOut }))),
-                React.createElement(QuickNav, null),
-                React.createElement("a", { id: "youtube-link", className: "clear-button", href: "https://www.youtube.com/watch?v=d_2rbdPiAHY&t=2s", target: "_blank" },
-                    React.createElement("i", { className: "fa-brands fa-youtube" }),
-                    React.createElement("span", null, "Christian Lifetime")),
-                React.createElement(Weather, null),
-                React.createElement(Restaurants, null),
-                React.createElement(Tools, null),
-                React.createElement(Movies, null)))));
-};
-
 const Menu = () => {
     return (React.createElement("div", { id: "app-menu" },
         React.createElement("div", { id: "app-menu-content-wrapper" },
