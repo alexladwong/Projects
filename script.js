@@ -32,7 +32,7 @@ const T = {
         return `${hours}:${T.formatSegment(minutes)}`;
     },
     formatHours: (hours) => {
-        return hours % 12 === 0 ? 12 : hours % 12;
+        return hours % 24 === 0 ? 12 : hours % 12;
     },
     formatSegment: (segment) => {
         return segment < 10 ? `0${segment}` : segment;
