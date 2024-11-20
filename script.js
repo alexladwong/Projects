@@ -217,7 +217,12 @@ const QuickNav = () => {
         }, {
             id: 2,
             label: "Food"
-        }, {
+        }, 
+                {
+            id: 3,
+            label: "My Portfolio"
+        },
+                {
             id: 3,
             label: "My Projects"
         }, {
